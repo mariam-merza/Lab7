@@ -26,3 +26,23 @@ function countWithinRandomRange(inputString, character) {
     // Return the count
     return count;
 }
+
+// Define the constant string, wrapping it for readability
+const quote = 
+    "So do all who live to see such times; but that is not for them to decide. " +
+    "All we have to decide is what to do with the time that is given to us.";
+
+// Call the function with the defined string and a character of your choosing
+const characterToSearch = 'i'; // Change this character to test different cases
+const countResult = countWithinRandomRange(quote, characterToSearch);
+
+// Handle the output based on the count result
+if (countResult === 0) {
+    console.log(`Didn't find any ${characterToSearch}'s.`);
+} else if (countResult % 2 === 0) {
+    console.log(`Found ${countResult} ${characterToSearch}'s, which is even!`);
+} else if (countResult % 3 === 0) {
+    console.log(`Found ${countResult} ${characterToSearch}'s. That's divisible by three! :O`);
+} else {
+    console.log(`Sadly, ${countResult} isn't a very interesting number of ${characterToSearch}'s. Oh well!`);
+}
